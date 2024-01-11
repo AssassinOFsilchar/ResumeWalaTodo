@@ -1,0 +1,7 @@
+.todoHeading{ 
+  font-weight: 700;
+  font-size: 45px;
+  margin: 10px;
+  margin-bottom: 25px;
+} 
+/* selector nehi use krne ke liye class ka naam camel casing meh define kr diya */
