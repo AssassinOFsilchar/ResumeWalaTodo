@@ -1,4 +1,7 @@
 
 .itemsContainer{
-  text-align: left;   
+  text-align: left;  
+  color: white; 
+  font-size: 20px;
+  font-weight: 600;
 }
