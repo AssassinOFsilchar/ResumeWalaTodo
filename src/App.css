@@ -15,15 +15,14 @@ input{
 body{ 
   width: 100vw;
   height: 80vh;
-  background: linear-gradient(90deg,rgb(255, 10, 10),white,rgb(177, 34, 34));
-}
-img{
-  position: absolute;
-  z-index: -5;
-  top: 0px;
-  object-fit: cover;
+  background-color: black;
 }
 
-/* css specificity ke karan problem ho rha tha....woh bootstrap ke chakkar meh mujko direct main.jsx meh dalna pada tha */
-
-/* aur woh bhi niche daalna pda */
+.thisBody{
+  background-color:rgba(0, 0, 0, 0.7)
+}
+.thatBody{
+  outline: 2px solid rgb(93, 92, 92);
+  outline-offset: 5px;
+}
+ 

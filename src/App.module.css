@@ -1,0 +1,11 @@
+img{
+  position: absolute;   
+  z-index: -5; 
+  display: inline-block;  
+} 
+
+.imgCont{ 
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}

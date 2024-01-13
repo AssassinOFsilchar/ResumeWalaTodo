@@ -3,6 +3,7 @@
   font-size: 45px;
   margin: 10px;
   margin-bottom: 25px;
-  color: white;
+  color: white; 
+  text-shadow: 1px 1px;
 } 
 /* selector nehi use krne ke liye class ka naam camel casing meh define kr diya */

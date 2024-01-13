@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-
+import { IoIosAddCircleOutline } from "react-icons/io";
 const AddTodo = ({onNewItem}) => {
 
   const [todoName, settodoName] = useState("")
   const [dueDate, setdueDate] = useState("")
 // prevented unnecessary cycle
+// but lafda hua tha...bol rha tha ki undefined ko defined bna diya uski mkc
+
 
 const handleNameChange=(event)=>{
   settodoName(event.target.value)
@@ -37,7 +39,7 @@ const handleAddButtonClicked=()=>{
           }
 
           >
-            Add
+           <IoIosAddCircleOutline size={30}/>
           </button>
         </div>
       </div>
