@@ -1,8 +1,6 @@
 .welcome{
   font-size: 40px;
   margin-top: 50px;
-  font-weight: 900;
-  color: rgb(223, 247, 251); 
-  text-shadow: 1px 1px;
-
+  font-weight: 500; 
+  color: white;
 }
