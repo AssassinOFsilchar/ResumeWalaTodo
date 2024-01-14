@@ -1,7 +1,10 @@
 import React, { useContext, useRef } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { TodoItemsContext } from "../store/todo-items-store";
-const AddTodo = ({onNewItem}) => {
+const AddTodo = () => {
+
+  // import { TodoItemsContext } from "../store/todo-items-store";
+  // had to be done to use it
   const {addNewItem}=useContext(TodoItemsContext);
   const todoNameElement=useRef("");
   const dueDateElement=useRef("");

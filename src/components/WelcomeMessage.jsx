@@ -4,6 +4,7 @@ import { TodoItemsContext } from '../store/todo-items-store';
 const WelcomeMessage = () => {
   
   const {todoItems}=useContext(TodoItemsContext);
+  // this is the best example of the use of context APIs
   return (
     <>
     {todoItems.length===0 &&
