@@ -7,6 +7,13 @@ export const TodoItemsContext = createContext({
 });
 // will give us autocomplete
 // will be exported to many places so written with caps, will be used as component as well, basically component ke karan hi caps meh likha haii
+// above part is context creation part
+// import { createContext } from "react"; ...had to be done to use it
+
+
+
+
+
 
 const todoItemsReducer = (currTodoItems, action) => {
   // curr state bhi milta hai, basically last updated value of currTodoItems
