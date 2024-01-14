@@ -6,7 +6,6 @@ import { TodoItemsContext } from "../store/todo-items-store";
  
 const TodoItems = () => {
   const {todoItems}=useContext(TodoItemsContext);
-  const {delteItem}=useContext(TodoItemsContext);
   console.log(todoItems)
   return (
     <div className={styles.itemsContainer}>

@@ -1,4 +1,4 @@
-import React, { Children, useReducer } from "react";
+import React, { useReducer } from "react";
 import { createContext } from "react";
 export const TodoItemsContext = createContext({
   todoItems: [],
@@ -6,9 +6,10 @@ export const TodoItemsContext = createContext({
   deleteItem: () => {},
 });
 // will give us autocomplete
-// will be exported to many places so written with caps, will be used as component as well
+// will be exported to many places so written with caps, will be used as component as well, basically component ke karan hi caps meh likha haii
+
 const todoItemsReducer = (currTodoItems, action) => {
-  // curr state bhi milta hai
+  // curr state bhi milta hai, basically last updated value of currTodoItems
   let newTodoItems = currTodoItems;
   if (action.type === "NEW_ITEM") {
     newTodoItems = [
@@ -22,7 +23,11 @@ const todoItemsReducer = (currTodoItems, action) => {
   }
   return newTodoItems;
 };
+// it shld be pure function
+// bahar ke chizo ko ched chad nehi krte, no side effects
+
 const TodoItemsContextProvider = ({ children }) => {
+  // basically yeh children aur kuch nehi, buss App.jsx ka maal sab hai
   const [todoItems, dispatchTodoItems] = useReducer(todoItemsReducer, []);
 
   const addNewItem = (itemName, itemDueDate) => {
@@ -55,3 +60,16 @@ const TodoItemsContextProvider = ({ children }) => {
   );
 };
 export default TodoItemsContextProvider;
+// value ke jagah purah object bhej diya hai maine bhai
+// yeh ek mast template jaisa hai, jisme you are separating the business logic from UI
+// use this extensively, and this should be your goal to make your react JS projects like this
+// empty array bhi truthy value return krta hai
+// state declare krke context provider ko dediya maine
+// edit hone peh purah context re paint hoega
+// context API jab bohot level, use ho tab
+
+// useReducer
+// jab choota sah change ho tab
+// state ko update and maintain krne ka logic tough ho jaye tab use kre
+// reducer: a pure fxn that takes current state and action and returns a new state
+// action: an object describing what happened
